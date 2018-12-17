@@ -18,5 +18,34 @@
   <prerequisites>
     <maven>3.0.3</maven>
   </prerequisites>
-
+<distributionManagement>
+   <repository>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/repository/releases</url>
+   </repository>
+</distributionManagement>
+<scm>
+   <connection>scm:git:https://github.com/vernetto/maven-samples.git</connection>
+   <url>https://github.com/vernetto/maven-samples</url>
+   <developerConnection>scm:git:https://github.com/vernetto/maven-samples.git</developerConnection>
+</scm>
+<build>
+   <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-release-plugin</artifactId>
+          <version>2.5.3</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+<plugins>
+<plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>maven-release-plugin</artifactId>
+   <version>2.5.3</version>
+</plugin>
+</plugins>
+</build>
 </project>
+
